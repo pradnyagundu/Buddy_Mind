@@ -20,6 +20,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
     { icon: Home, label: 'Dashboard', path: '/' },
     { icon: Heart, label: 'Mood Tracker', path: '/mood' },
     { icon: BookOpen, label: 'Voice Journal', path: '/journal' },
+    { icon: MessageCircle, label: 'AI Therapist', path: '/chat' },
     { icon: Gamepad2, label: 'Stress Games', path: '/games' },
     { icon: Music, label: 'Soundtracks', path: '/audio' },
   ];
