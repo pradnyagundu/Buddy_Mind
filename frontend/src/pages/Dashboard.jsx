@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useAuth } from '../contexts/AuthContext';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Heart, BookOpen, Gamepad2, TrendingUp, Smile } from 'lucide-react';
+import { Heart, BookOpen, Gamepad2, TrendingUp, Smile, MessageCircle } from 'lucide-react';
 import { toast } from 'sonner';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
 
 const Dashboard = () => {
+  const { getAuthHeader } = useAuth();
   const [stats, setStats] = useState({
     total_mood_entries: 0,
     total_journal_entries: 0,
