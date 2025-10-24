@@ -27,9 +27,9 @@ const Dashboard = () => {
   const fetchDashboardData = async () => {
     try {
       const [dashboardRes, moodRes, gameRes] = await Promise.all([
-        axios.get(`${API}/dashboard/stats`),
-        axios.get(`${API}/moods/stats`),
-        axios.get(`${API}/games/stats`)
+        axios.get(`${API}/dashboard/stats`, { headers: getAuthHeader() }),
+        axios.get(`${API}/moods/stats`, { headers: getAuthHeader() }),
+        axios.get(`${API}/games/stats`, { headers: getAuthHeader() })
       ]);
 
       setStats(dashboardRes.data);
