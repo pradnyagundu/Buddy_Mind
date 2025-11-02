@@ -266,3 +266,17 @@ This project is built for mental wellness and stress relief purposes.
 ---
 
 **Built with ❤️ for mental wellness and peace of mind** 🧘‍♀️✨
+
+
+
+
+supervisorctl -c supervisord.conf stop backend
+supervisord -c supervisord.conf
+
+supervisorctl -c supervisord.conf restart backend
+
+
+cd /Users/pradnya/Desktop/app/frontend
+yarn install
+yarn start
+

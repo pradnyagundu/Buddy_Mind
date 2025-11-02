@@ -10,7 +10,7 @@ from pydantic import BaseModel, Field, ConfigDict, EmailStr
 from typing import List, Optional
 import uuid
 from datetime import datetime, timezone
-from emergentintegrations.llm.chat import LlmChat, UserMessage
+# from emergentintegrations.llm.chat import LlmChat, UserMessage
 import asyncio
 
 # Import custom modules
@@ -186,6 +186,8 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
 @api_router.get("/")
 async def root():
     return {"message": "Welcome to Buddy Mind Flow API with AI Therapist", "status": "active"}
+
+
 
 
 # ============= AUTH ROUTES =============
